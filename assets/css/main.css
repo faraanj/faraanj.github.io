@@ -2562,13 +2562,28 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 0.25em;
-		border: 0;
-		display: inline-block;
-		position: relative;
+   		max-width: 100%; /* Set maximum width to prevent the image from exceeding its container */
+		height: auto; /* Allow the height to adjust proportionally based on the width */
+		object-fit: cover;
 	}
 
-		.image img {
+/*
+	
+	.image {
+		border-radius: 0.25em;
+		border: 0;
+		display: block;
+		position: relative;
+		overflow:hidden;	
+	}
+
+	  .image img {
+		max-width: 100%; 
+		height: auto; 
+		display: block; 
+	  }
+
+		 .image img {
 			border-radius: 0.25em;
 			display: block;
 		}
@@ -2611,7 +2626,7 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
-			}
+			}  */
 
 /* List */
 
